@@ -19,7 +19,7 @@ This repository is dedicated to a hands-on exploration of Dockerizing Flask appl
 - Utilize `docker run -d -p <port1>:5000 <name_of_image>` to run the image in a container.
 - Preview the image by changing the port to 1 in Cloud Shell.
 - Observe the list of containers with `docker ps`.
-- Halt the container using `docker stop <container_ID>`.
+- Stop the container using `docker stop <container_ID>`.
 - Remove the container with `docker rm <container_ID>`.
 - Clean and remove everything with `docker system prune -a -f`.
 
@@ -28,7 +28,7 @@ This repository is dedicated to a hands-on exploration of Dockerizing Flask appl
 ### Preparing Multiple Flask Applications:
 
 - Create a folder and name it Part2.
-- Form a Docker Compose file and name it docker-compose.yml, employing the provided code:
+- Form a Docker Compose file and name it docker-compose.yml, usinngg code:
 
 ```yaml
 version: '3'
@@ -41,28 +41,21 @@ services:
     build: ./flask2
     ports:
       - "5002:5000"
-
-### Dockerizing Multiple Flask Applications
-
-1. **Preparing Multiple Flask Applications:**
-   - Create two folders: `flask1` and `flask2`.
-   - In each folder, generate a Flask application (`app.py`), a Dockerfile, and a `requirements.txt` file.
-   - Use the provided Dockerfile code in both Flask folders.
-   - Add "flask" to the `requirements.txt` file in both folders.
-
-2. **Dockerizing with Docker Compose:**
-   - In your Cloud Shell terminal, execute `docker-compose build` to build your images.
-   - Use `docker-compose up` to run your images in containers.
-   - Preview your images by adjusting ports according to the Docker Compose file.
-   - Inspect a list of containers with `docker-compose ps`.
-   - Halt your containers with `docker-compose down`.
-   - Clean and remove everything with `docker system prune -a -f`.
-
-### Explanation of Docker Compose
-
-- **Version:** Version of the Docker Compose file.
-- **Services:** Services for the application.
-  - **Build:** Specific path.
-  - **Ports:** Maps a port from the host machine to a port from an image container.
-  - **Volumes:** Mounts a directory from the host machine to the image container.
-
+```
+Create two folders: flask1 and flask2.
+In each folder, generate a Flask application (app.py), a Dockerfile, and a requirements.txt file.
+Use the provided Dockerfile code in both Flask folders.
+Add "flask" to the requirements.txt file in both folders.
+Dockerizing with Docker Compose:
+In your Cloud Shell terminal, execute docker-compose build to build your images.
+Use docker-compose up to run your images in containers.
+Preview your images by adjusting ports according to the Docker Compose file.
+Inspect a list of containers with docker-compose ps.
+Halt your containers with docker-compose down.
+Clean and remove everything with docker system prune -a -f.
+Explanation of Docker Compose
+Version: Version of the Docker Compose file.
+Services: Services for the application.
+Build: Specific path.
+Ports: Maps a port from the host machine to a port from an image container.
+Volumes: Mounts a directory from the host machine to the image container.
