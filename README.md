@@ -42,9 +42,9 @@ services:
     ports:
       - "5002:5000"
 ```
-###Dockerizing Multiple Flask Applications
+### Dockerizing Multiple Flask Applications
 
-##Create two folders: flask1 and flask2.
+## Create two folders: flask1 and flask2.
 -In each folder, generate a Flask application (app.py), a Dockerfile, and a requirements.txt file.
 
 -Use the provided Dockerfile code in both Flask folders. Add "flask" to the requirements.txt file in both folders.
@@ -60,3 +60,7 @@ Use docker-compose up to run your images in containers.
 -stop your containers with docker-compose down.
 
 -Clean and remove everything with docker system prune -a -f.
+
+
+### Reflection
+Using Docker provided a smooth and consistent deployment process, making sure that applications run consistently across different environments. 
