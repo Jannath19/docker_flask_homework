@@ -1,6 +1,7 @@
 # docker_flask_homework
 This assignment aims to provide hands-on experience in Dockerizing Flask applications, first individually and then using Docker Compose for managing multiple applications.
 
+Dockerizing Flask Applications
 Part 1: Dockerizing a Single Flask Application
 Setting Up and Dockerizing a Flask App:
 Create a folder and name it Part1.
@@ -26,3 +27,23 @@ ENV NAME World
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
+Create a text file and name it requirements.txt. Add "flask" to the file.
+In your Cloud Shell terminal, type docker build -t <name_of_image> . to build the image.
+Type docker images to view the list of images.
+Type docker run -d -p <port1>:5000 <name_of_image> to run the image in a container.
+Preview the image by changing the port to port 1 in Cloud Shell.
+Type docker ps to view a list of containers.
+Type docker stop <container_ID> to stop the container.
+Type docker rm <container_ID> to remove the container.
+Type docker system prune -a -f to clean and remove everything.
+Part 2: Dockerizing Multiple Flask Applications (Using Compose)
+Preparing Multiple Flask Applications:
+
+Create a folder and name it Part2.
+Create a Docker Compose file and name it docker-compose.yml. Use the following code:
+yaml
+Copy code
+version: '3'
+services:
+  flask1:
+    build: ./flask1
