@@ -45,21 +45,21 @@ services:
 ### Dockerizing Multiple Flask Applications
 
 ## Create two folders: flask1 and flask2.
--In each folder, generate a Flask application (app.py), a Dockerfile, and a requirements.txt file.
+- In each folder, generate a Flask application (app.py), a Dockerfile, and a requirements.txt file.
 
--Use the provided Dockerfile code in both Flask folders. Add "flask" to the requirements.txt file in both folders.
+- Use the provided Dockerfile code in both Flask folders. Add "flask" to the requirements.txt file in both folders.
 
 Dockerizing with Docker Compose:
--In the Cloud Shell terminal, execute docker-compose build to build your images.
+- In the Cloud Shell terminal, execute docker-compose build to build your images.
 Use docker-compose up to run your images in containers.
 
--Preview your images by adjusting ports according to the Docker Compose file.
+- Preview your images by adjusting ports according to the Docker Compose file.
 
--Inspect a list of containers with docker-compose ps.
+- Inspect a list of containers with docker-compose ps.
 
--stop your containers with docker-compose down.
+- stop your containers with docker-compose down.
 
--Clean and remove everything with docker system prune -a -f.
+- Clean and remove everything with docker system prune -a -f.
 
 
 ### Reflection
